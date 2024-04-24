@@ -1,6 +1,157 @@
+<!-- app.component.html -->
+<div class="container mb-3">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>probando graficos</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col-md-4"
+      (click)="mostrarGrafico(seleccionarTipoGanancia.totalCotizacion)"
+    >
+      <!-- total-cotizacion-card.component.html -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Total Cotización</h5>
+          <!-- Aquí mostrar el valor del total de cotización -->
+          <span class="badge rounded-pill text-bg-secondary">
+            {{ monto | currency }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-md-4"
+      (click)="mostrarGrafico(seleccionarTipoGanancia.totalGanancia)"
+    >
+      <!-- total-ganancia-card.component.html -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Total Ganancia</h5>
+          <!-- Aquí mostrar el valor del total de ganancia -->
+          <span class="badge rounded-pill text-bg-secondary">
+            {{ monto | currency }}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-md-4"
+      (click)="mostrarGrafico(seleccionarTipoGanancia.totalFacturado)"
+    >
+      <!-- total-facturado-card.component.html -->
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Total Facturado</h5>
+          <!-- Aquí mostrar el valor del total facturado -->
+          <span class="badge rounded-pill text-bg-secondary">
+            {{ monto | currency }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<h1>
-  probando graficos
-</h1>
-
-<div style="width: 800px;"><canvas id="ctx"></canvas></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <app-graficos
+            [tipoGrafico]="tipoGrafico"
+            [label]="label"
+            [labels]="labels"
+            [data]="data"
+            [backgroundsColor]="backgroundColor"
+            [borderColor]="borderColor"
+          ></app-graficos>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title cardTitleBackGround">
+            <h5>Top 10 Clientes 2024</h5>
+          </div>
+          <hr />
+          <table class="table table-striped">
+            <thead>
+              <!--cliente total cotizado, total gananado y total facturado q debe ser 0-->
+              <tr>
+                <th>Cliente</th>
+                <th>Total Ganancia</th>
+                <th>Total Cotización</th>
+                <th>Total Facturado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+              <tr>
+                <td>#INV-0001</td>
+                <td>Global Technologies</td>
+                <td>Paypal</td>
+                <td>11 Mar 2019</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
