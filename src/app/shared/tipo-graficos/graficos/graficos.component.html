@@ -1,1 +1,19 @@
-<div style="width: 520px"><canvas id="ctx"></canvas></div>
+<!-- <div style="width: 520px" id="ctxGraficos"></div> -->
+
+<!-- <p>
+  {{ title }}
+</p> -->
+<!-- <div id="ctxGraficosCotizacion" style="width: 520px"></div> -->
+
+<!-- @if (graficoSeleccionado == 'ctxGraficosCotizacion') {
+<p>Cotización</p>
+<div style="width: 520px" id="ctxGraficosCotizacion"></div>
+} @if (graficoSeleccionado == 'ctxGraficosGanancia') {
+<p>Ganancias</p>
+<div style="width: 520px" id="ctxGraficosGanancia"></div>
+} @if (graficoSeleccionado == 'ctxGraficosFacturado') {
+<p>Facturado</p>
+<div style="width: 520px" id="ctxGraficosFacturado"></div>
+} -->
+
+<div echarts [options]="_chartOption" class="demo-chart"></div>
